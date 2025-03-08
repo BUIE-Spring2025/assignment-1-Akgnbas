@@ -5,6 +5,9 @@ def int_to_roman(num):
     :param num: Integer value between 1 and 3999 inclusive.
     :return: A string representing the Roman numeral of the integer.
     """
+    if not (1 <= num <= 3999):
+        return "Number must be between 1 and 3999 inclusive."
+    
     roman=""
     for i in range(num//1000):
         roman+="M"
